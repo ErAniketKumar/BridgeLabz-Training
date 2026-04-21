@@ -22,6 +22,12 @@ namespace CSharp_Programming_Language.Day_03
             Console.WriteLine(a.Equals(b));
             Console.WriteLine(object.ReferenceEquals(name, name2));
 
+            object aa = new string("test");
+            object bb = new string("test");
+
+            Console.WriteLine(a == b);
+            Console.WriteLine(a.Equals(b));
+
         }
 
     }
