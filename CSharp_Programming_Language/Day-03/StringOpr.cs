@@ -25,9 +25,15 @@ namespace CSharp_Programming_Language.Day_03
             object aa = new string("test");
             object bb = new string("test");
 
-            Console.WriteLine(a == b);
-            Console.WriteLine(a.Equals(b));
+            Console.WriteLine("here");
+            Console.WriteLine(aa == bb);
+            Console.WriteLine(aa.Equals(bb));
 
+            StringBuilder sb1 = new StringBuilder("hi");
+            StringBuilder sb2 = new StringBuilder("hi");
+
+            Console.WriteLine(sb1 == sb2);
+            Console.WriteLine(sb1.Equals(sb2));
         }
 
     }
