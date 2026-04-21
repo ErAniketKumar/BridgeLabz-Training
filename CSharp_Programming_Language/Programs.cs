@@ -17,6 +17,10 @@ using CSharp_Programming_Language.Day_03;
 
 StringOpr stringopr = new StringOpr();
 
-stringopr.StringMethod();
+//stringopr.StringMethod();
+
+MultiDimensionArray multiarray = new MultiDimensionArray();
+
+multiarray.MultiDArray();
 
 
