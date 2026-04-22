@@ -51,7 +51,7 @@ namespace CSharp_Programming_Language.Ladder_Snake_Game
                 Console.WriteLine("Enter Player Name");
                 string name = Console.ReadLine();
 
-                player.Add(new Player(name, i+1));
+                player.Add(new Player(name, i));
             }
 
             Random random = new Random();
@@ -61,8 +61,9 @@ namespace CSharp_Programming_Language.Ladder_Snake_Game
                 for (int i = 0; i < noOfPlayer; i++)
                 {
                     int dice = random.Next(1, 7);
+                    Console.WriteLine($"dice score: {dice}");
 
-                    Console.WriteLine($"{player[i].Name}");
+                    Console.WriteLine($"Player: {player[i].Name}");
                     Console.WriteLine($"Previous score: {player[i].Score}");
 
                     if (player[i].Score + dice > 100)
