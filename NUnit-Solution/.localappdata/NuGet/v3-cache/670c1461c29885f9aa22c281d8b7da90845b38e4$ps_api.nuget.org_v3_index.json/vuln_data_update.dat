@@ -1,0 +1,1 @@
+{"opentelemetry.exporter.zipkin":[{"url":"https://github.com/advisories/GHSA-88hf-wf7h-7w4m","severity":1,"versions":"(, 1.15.2]"}]}
