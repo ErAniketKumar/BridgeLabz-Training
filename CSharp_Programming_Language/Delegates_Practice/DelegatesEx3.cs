@@ -15,8 +15,11 @@ public class DelegatesEx3
         // Predicate: Returns bool, one parameter
 
         Predicate<int> IsEven = (int x) => x % 2 == 0;
-
         System.Console.WriteLine(IsEven(20));
+
+        Action<int, int, string> action = (x, y, msg) => System.Console.WriteLine($"{msg} {x}+{y}={x + y}");
+
+        action(10, 5, "Sum");
 
     }
 
