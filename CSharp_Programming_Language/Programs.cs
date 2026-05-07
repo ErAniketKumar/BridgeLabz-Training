@@ -97,3 +97,90 @@ using CSharp_Programming_Language.Linkedlist;
 // closure1.OuterFun();
 
 // closure1.OuterFun2();
+
+
+// Publisher publisher = new Publisher();
+// Subscriber subscriber = new Subscriber();
+
+// publisher.OneNotify += subscriber.ReceivedNotification;
+
+// publisher.DoSomthing();
+
+// Publisher2 publisher2 = new Publisher2();
+
+
+
+
+
+
+
+
+// Console.WriteLine("=== OCP Demo - Shapes ===");
+// var calculator = new AreaCalculator();
+
+// var shapes = new List<IShape>
+//             {
+//                 new Circle { Radius = 5 },
+//                 new Rectangle { Width = 4, Height = 6 },
+//                 new Triangle { Base = 3, Height = 4 },
+//                 new Square { Side = 5 },
+//                 new Pentagon { Side = 4 }  // Added without modifying any existing code!
+//             };
+
+// foreach (var shape in shapes)
+// {
+//     Console.WriteLine($"{shape.GetType().Name} area: {calculator.CalculateArea(shape):F2}");
+// }
+
+// Console.WriteLine($"\nTotal area: {calculator.CalculateTotalArea(shapes):F2}");
+
+// Console.WriteLine("\n=== OCP Demo - Discount Strategies ===");
+// var product = new Product
+// {
+//     Name = "Laptop",
+//     Price = 1000m,
+//     DiscountStrategy = new PercentageDiscountStrategy(20)
+// };
+
+// Console.WriteLine($"Product: {product.Name}");
+// Console.WriteLine($"Original price: ${product.Price}");
+// Console.WriteLine($"Strategy: {product.DiscountStrategy.StrategyName}");
+// Console.WriteLine($"Final price: ${product.GetFinalPrice()}");
+
+// // Change strategy dynamically - OCP allows this!
+// product.DiscountStrategy = new SeasonalDiscountStrategy();
+// Console.WriteLine($"\nNew strategy: {product.DiscountStrategy.StrategyName}");
+// Console.WriteLine($"Final price: ${product.GetFinalPrice()}");
+
+// // Add loyalty discount - new class, no existing code changes
+// product.DiscountStrategy = new LoyaltyPointsDiscountStrategy(250);
+// Console.WriteLine($"\nLoyalty strategy: {product.DiscountStrategy.StrategyName}");
+// Console.WriteLine($"Final price: ${product.GetFinalPrice()}");
+
+// Console.WriteLine("\n=== OCP Demo - Specification Pattern ===");
+// var products = new List<Product>
+//             {
+//                 new Product { Name = "HP Laptop", Price = 800m },
+//                 new Product { Name = "Dell Laptop", Price = 1200m },
+//                 new Product { Name = "MacBook Pro", Price = 1500m },
+//                 new Product { Name = "Lenovo Mouse", Price = 30m }
+//             };
+
+// var filter = new ProductFilter();
+// var priceSpec = new PriceSpecification(500, 1000);
+// var nameSpec = new NameContainsSpecification("laptop");
+// var combinedSpec = new AndSpecification<Product>(priceSpec, nameSpec);
+
+// Console.WriteLine("Laptops between $500-$1000:");
+// foreach (var p in filter.Filter(products, combinedSpec))
+// {
+//     Console.WriteLine($"- {p.Name}: ${p.Price}");
+// }
+
+
+DirFileHandling dirFileHandling = new DirFileHandling();
+
+dirFileHandling.DirFileOpr();
+
+
+
