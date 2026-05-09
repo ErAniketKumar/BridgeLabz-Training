@@ -178,9 +178,9 @@ using CSharp_Programming_Language.Linkedlist;
 // }
 
 
-DirFileHandling dirFileHandling = new DirFileHandling();
+// DirectoryHandling directoryHandling = new DirectoryHandling();
+// directoryHandling.DirFileOpr();
 
-dirFileHandling.DirFileOpr();
+FileHandling fileHandling = new FileHandling();
 
-
-
+fileHandling.FileHandlingOpr();
