@@ -40,26 +40,41 @@ public class BasicFileCrud
         //     System.Console.WriteLine(d);
         // }
 
+        // string[] lines =
+        // {
+        //     "line 1",
+        //     "line 2",
+        //     "Line 3"
+        // };
 
+        // File.AppendAllLines(RootPath + @"\Hello.txt", lines);
+        // string ss = File.ReadAllText(RootPath + @"\Hello.txt");
+        // System.Console.WriteLine(ss);
 
+        // File.AppendAllText(RootPath + @"\Hello.txt", " This is new text for apppend!");
+        // string ss2 = File.ReadAllText(RootPath + @"\Hello.txt");
+        // System.Console.WriteLine(ss2);
 
-
-        string[] lines =
+        using (StreamWriter sw = File.AppendText(RootPath + @"\Hello.txt"))
         {
-            "line 1",
-            "line 2",
-            "Line 3"
-        };
+            sw.WriteLine("New Appended Text");
+        }
 
-        File.AppendAllLines(RootPath + @"\Hello.txt", lines);
-        string ss = File.ReadAllText(RootPath + @"\Hello.txt");
-        System.Console.WriteLine(ss);
+        using (StreamReader sr = new StreamReader(RootPath + @"\Hello.txt"))
+        {
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                Console.WriteLine(line);
+            }
+        }
 
 
-        File.AppendAllText(RootPath + @"\Hello.txt", " This is new text for apppend!");
-        string ss2 = File.ReadAllText(RootPath + @"\Hello.txt");
-        System.Console.WriteLine(ss2);
-        
+        using (StreamWriter sw = new StreamWriter(RootPath + @"\demo.txt"))
+        {
+            sw.WriteLine("Hello");
+            sw.WriteLine("Aniket");
+        }
     }
 
 }

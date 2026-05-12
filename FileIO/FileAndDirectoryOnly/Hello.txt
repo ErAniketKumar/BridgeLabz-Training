@@ -7,4 +7,9 @@ Line 3
  This is new text for apppend!line 1
 line 2
 Line 3
- This is new text for apppend!
+ This is new text for apppend!New Appended Text
+New Appended Text
+New Appended Text
+New Appended Text
+New Appended Text
+New Appended Text
