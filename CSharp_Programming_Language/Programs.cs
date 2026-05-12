@@ -181,6 +181,20 @@ using CSharp_Programming_Language.Linkedlist;
 // DirectoryHandling directoryHandling = new DirectoryHandling();
 // directoryHandling.DirFileOpr();
 
-FileHandling fileHandling = new FileHandling();
+// FileHandling fileHandling = new FileHandling();
 
-fileHandling.FileHandlingOpr();
+// fileHandling.FileHandlingOpr();
+
+
+// MixedOpr mixedOpr = new MixedOpr();
+
+// mixedOpr.PlayFile();
+
+
+
+JsonFileHandling jsonFile = new JsonFileHandling();
+
+jsonFile.JsonHandleFun();
+
+
+

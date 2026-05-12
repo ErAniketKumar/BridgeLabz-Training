@@ -1,38 +1,42 @@
 using System;
-using System.IO;
 using System.Text.Json;
-
+using System.Text;
+using System.IO;
 class Student
 {
-    public int Id { get; set; }
     public string Name { get; set; }
+    public int Age { get; set; }
+    public char Gender { get; set; }
 }
 
-class ProgramP
+public class JsonFileHandling
 {
-    static void Main()
+    Student student = new Student
     {
-        Student s = new Student()
+        Name = "Aniket",
+        Age = 20,
+        Gender = 'M'
+    };
+    public void JsonHandleFun()
+    {
+
+        // System.Console.WriteLine(student);
+        // System.Console.WriteLine(student.Age);
+
+        string CurrDir = Directory.GetCurrentDirectory();
+
+        JsonSerializerOptions options = new JsonSerializerOptions
         {
-            Id = 1,
-            Name = "Aniket"
+            WriteIndented = true
         };
 
-        // Object -> JSON
-        string json =
-            JsonSerializer.Serialize(s);
+        string json = JsonSerializer.Serialize(student, options);
 
-        // Save file
-        File.WriteAllText("student.json", json);
+        File.WriteAllText(CurrDir + @"/FileSystem/student.json", json);
 
-        // Read file
-        string readJson =
-            File.ReadAllText("student.json");
+        Student ss = JsonSerializer.Deserialize<Student>(json);
 
-        // JSON -> Object
-        Student data =
-            JsonSerializer.Deserialize<Student>(readJson);
+        System.Console.WriteLine(ss.Gender);
 
-        Console.WriteLine(data.Name);
     }
 }
