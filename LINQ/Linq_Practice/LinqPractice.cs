@@ -82,17 +82,17 @@ public class LinqPractice
 
         // orderby and orderby descending order
 
-        var data = books.OrderBy(b => b.Price);
-        foreach (var d in data)
-        {
-            System.Console.WriteLine(d.Price);
-        }
+        // var data = books.OrderBy(b => b.Price);
+        // foreach (var d in data)
+        // {
+        //     System.Console.WriteLine(d.Price);
+        // }
 
-        var descdata = books.OrderByDescending(b => b.Price);
-        foreach (var d in descdata)
-        {
-            System.Console.WriteLine(d.Price);
-        }
+        // var descdata = books.OrderByDescending(b => b.Price);
+        // foreach (var d in descdata)
+        // {
+        //     System.Console.WriteLine(d.Price);
+        // }
 
         // sort by second paramater
 
@@ -115,13 +115,13 @@ public class LinqPractice
         // .ThenByDescending(b => b[1]);
 
         // sort by acending if 1st paramater same then sort by 2nd paramater assending
-        //     var data = list.OrderBy(b => b[0])
-        //    .ThenBy(b => b[1]);
+        var data = list.OrderBy(b => b[0])
+       .ThenBy(b => b[1]);
 
-        // foreach (var d in data)
-        // {
-        //     System.Console.WriteLine(d[0] + " " + d[1]);
-        // }
+        foreach (var d in data)
+        {
+            System.Console.WriteLine(d[0] + " " + d[1]);
+        }
     }
 
 
