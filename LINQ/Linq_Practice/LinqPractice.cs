@@ -111,12 +111,12 @@ public class LinqPractice
         };
 
         // sort by first paramater but when same then sort by second parameter descending
-        // var data = list.OrderBy(b => b[0])
-        // .ThenByDescending(b => b[1]);
+        var data = list.OrderBy(b => b[0])
+        .ThenByDescending(b => b[1]);
 
         // sort by acending if 1st paramater same then sort by 2nd paramater assending
-        var data = list.OrderBy(b => b[0])
-       .ThenBy(b => b[1]);
+    //     var data = list.OrderBy(b => b[0])
+    //    .ThenBy(b => b[1]);
 
         foreach (var d in data)
         {
