@@ -79,7 +79,49 @@ public class LinqPractice
         // where with select like i want only book id whose price gt 200
 
         var bID = books.Where(b => b.Price > 200).Select(b => b.Id);
-        
+
+        // orderby and orderby descending order
+
+        var data = books.OrderBy(b => b.Price);
+        foreach (var d in data)
+        {
+            System.Console.WriteLine(d.Price);
+        }
+
+        var descdata = books.OrderByDescending(b => b.Price);
+        foreach (var d in descdata)
+        {
+            System.Console.WriteLine(d.Price);
+        }
+
+        // sort by second paramater
+
+        List<List<int>> list = new List<List<int>>()
+        {
+            new List<int>{1,3},
+            new List<int>{2,4},
+            new List<int>{3,3},
+            new List<int>{3,4},
+            new List<int>{4,9},
+            new List<int>{5,11},
+            new List<int>{6,23},
+            new List<int>{7,1},
+            new List<int>{2,9},
+            new List<int>{4,5},
+        };
+
+        // sort by first paramater but when same then sort by second parameter descending
+        // var data = list.OrderBy(b => b[0])
+        // .ThenByDescending(b => b[1]);
+
+        // sort by acending if 1st paramater same then sort by 2nd paramater assending
+        //     var data = list.OrderBy(b => b[0])
+        //    .ThenBy(b => b[1]);
+
+        // foreach (var d in data)
+        // {
+        //     System.Console.WriteLine(d[0] + " " + d[1]);
+        // }
     }
 
 
