@@ -2,4 +2,5 @@
   <Project Path="../FileIO/FileIO.csproj" />
   <Project Path="AdoNet/AdoNet.csproj" />
   <Project Path="CSharp_Programming_Language.csproj" />
+  <Project Path="LINQ/LINQ.csproj" />
 </Solution>
