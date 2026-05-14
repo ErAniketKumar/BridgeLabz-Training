@@ -9,61 +9,79 @@ public class LinqPractice
 
         var books = BooksData.GetBooks();
 
-        var data = books.Select(b => b.Author);
+        //     var data = books.Select(b => b.Author);
 
-        var idmul = books.Select(b => b.Id * 2);
+        //     var idmul = books.Select(b => b.Id * 2);
 
-        foreach (var item in data)
-        {
-            System.Console.WriteLine(item);
-        }
+        //     foreach (var item in data)
+        //     {
+        //         System.Console.WriteLine(item);
+        //     }
 
-        foreach (var item in idmul)
-        {
-            System.Console.WriteLine(item);
-        }
+        //     foreach (var item in idmul)
+        //     {
+        //         System.Console.WriteLine(item);
+        //     }
 
-        // select two items
+        //     // select two items
 
-        var bookNameAndAuthor = books.Select(b => new
-        {
-            BookName = b.Name,
-            AuthorName = b.Author
-        });
-
-
-        foreach (var ba in bookNameAndAuthor)
-        {
-            System.Console.WriteLine(ba.BookName + " " + ba.AuthorName);
-        }
+        //     var bookNameAndAuthor = books.Select(b => new
+        //     {
+        //         BookName = b.Name,
+        //         AuthorName = b.Author
+        //     });
 
 
-        // query based syntax
+        //     foreach (var ba in bookNameAndAuthor)
+        //     {
+        //         System.Console.WriteLine(ba.BookName + " " + ba.AuthorName);
+        //     }
 
-        var dataq = from b in books
-                    select b.Id;
 
-        var pairinfo = from b in books
-                       select (new
-                       {
-                           bName = b.Name,
-                           bAuthor = b.Author
-                       });
+        //     // query based syntax
 
-        foreach (var ba in pairinfo)
-        {
-            System.Console.WriteLine(ba.bName + " " + ba.bAuthor);
-        }
+        //     var dataq = from b in books
+        //                 select b.Id;
 
-        //without new
+        //     var pairinfo = from b in books
+        //                    select (new
+        //                    {
+        //                        bName = b.Name,
+        //                        bAuthor = b.Author
+        //                    });
 
-        var data2 = books.Select(b => (bookName: b.Name, bookAuthor: b.Author)).ToList();
+        //     foreach (var ba in pairinfo)
+        //     {
+        //         System.Console.WriteLine(ba.bName + " " + ba.bAuthor);
+        //     }
 
-        foreach (var d in data2)
-        {
-            System.Console.WriteLine(d.bookName + " " + d.bookAuthor);
-        }
+        //     //without new
 
-        data2.ForEach(b => System.Console.WriteLine(b.bookName + " " + b.bookAuthor));
+        //     var data2 = books.Select(b => (bookName: b.Name, bookAuthor: b.Author)).ToList();
+
+        //     foreach (var d in data2)
+        //     {
+        //         System.Console.WriteLine(d.bookName + " " + d.bookAuthor);
+        //     }
+
+        //     data2.ForEach(b => System.Console.WriteLine(b.bookName + " " + b.bookAuthor));
+
+
+        // where use for filtering the row and per condition
+
+        // var data = books.Where(b => b.Price > 200);
+
+        // foreach (var d in data)
+        // {
+        //     System.Console.WriteLine(d.Name + " " + d.Price + " " + d.Author);
+        // }
+
+        // where with select like i want only book id whose price gt 200
+
+        var bID = books.Where(b => b.Price > 200).Select(b => b.Id);
+        
     }
+
+
+
 }
