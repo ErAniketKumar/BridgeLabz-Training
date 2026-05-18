@@ -1,0 +1,12 @@
+Develop an Employee Management System that allows users to add, delete, update and view employee records.
+
+The system should use data structures such as lists and dictionaries to store and manage employee data. Each employee record should contain the following information:
+
+Employee ID (unique identifier)
+Employee Name
+Employee Age
+Employee Salary
+
+The system should implement custom exception handling, allowing the user to create their own exception classes and messages. This should be used to handle errors such as invalid employee data input, duplicate employee IDs, and other relevant exceptions.
+
+The system should be tested using unit testing. Ensure that each method is tested with relevant test cases, and that the system functions as expected.
