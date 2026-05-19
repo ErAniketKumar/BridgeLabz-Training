@@ -1,4 +1,5 @@
 using ADONETLEARN.ADONETLEARN.ADONET;
+using ADONETLEARN.ADONETLEARN.RankingStudentProblem;
 
 // DataBaseCrud dataBaseCrud = new DataBaseCrud();
 
@@ -7,5 +8,9 @@ using ADONETLEARN.ADONETLEARN.ADONET;
 
 // crudOper.ConnectionHandler();
 
-EmployeeManagement employeeManagement = new EmployeeManagement();
-employeeManagement.EmployeeManagementHandler();
+// EmployeeManagement employeeManagement = new EmployeeManagement();
+// employeeManagement.EmployeeManagementHandler();
+
+
+StudentRanking studentRanking = new StudentRanking();
+studentRanking.StudentRandingHandlerFun();
