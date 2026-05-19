@@ -38,14 +38,14 @@ namespace ADONETLEARN.ADONETLEARN.ADONET
 
             DataRead(cmd);
 
-            // string insertquerry = @"INSERT INTO students (name, age)
-            // values ('Sunil', 22),
-            //        ('deepak', 24),
-            //        ('Rahul',25)
-            // ";
+            string insertquerry = @"INSERT INTO students (name, age)
+            values ('Sunil', 22),
+                   ('deepak', 24),
+                   ('Rahul',25)
+            ";
 
-            // cmd.CommandText = insertquerry;
-            // cmd.ExecuteNonQuery();
+            cmd.CommandText = insertquerry;
+            cmd.ExecuteNonQuery();
             // cmd.CommandText = readquerry;
             // DataRead(cmd);
 
