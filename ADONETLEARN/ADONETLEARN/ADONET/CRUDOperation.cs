@@ -79,22 +79,22 @@ namespace ADONETLEARN.ADONETLEARN.ADONET
 
             // update data
 
-            cmd.CommandText = @"UPDATE students
-                            SET name='Jivan' WHERE sid=5";
+            // cmd.CommandText = @"UPDATE students
+            //                 SET name='Jivan' WHERE sid=5";
 
-            cmd.ExecuteNonQuery();
-
-            cmd.CommandText = readquerry;
-            DataRead(cmd);
-
-            // Delete
-
-            // cmd.CommandText = @"DELETE FROM students
-            //                      WHERE sid=2";
             // cmd.ExecuteNonQuery();
 
             // cmd.CommandText = readquerry;
             // DataRead(cmd);
+
+            // Delete
+
+            cmd.CommandText = @"DELETE FROM students
+                                 WHERE sid=2";
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandText = readquerry;
+            DataRead(cmd);
         }
         public void ConnectionHandler()
         {
