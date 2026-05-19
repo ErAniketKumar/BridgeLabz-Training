@@ -38,14 +38,14 @@ namespace ADONETLEARN.ADONETLEARN.ADONET
 
             DataRead(cmd);
 
-            string insertquerry = @"INSERT INTO students (name, age)
-            values ('Sunil', 22),
-                   ('deepak', 24),
-                   ('Rahul',25)
-            ";
+            // string insertquerry = @"INSERT INTO students (name, age)
+            // values ('Sunil', 22),
+            //        ('deepak', 24),
+            //        ('Rahul',25)
+            // ";
 
-            cmd.CommandText = insertquerry;
-            cmd.ExecuteNonQuery();
+            // cmd.CommandText = insertquerry;
+            // cmd.ExecuteNonQuery();
             // cmd.CommandText = readquerry;
             // DataRead(cmd);
 
@@ -56,22 +56,22 @@ namespace ADONETLEARN.ADONETLEARN.ADONET
 
 
             // create new table 
-            // cmd.CommandText = @"CREATE TABLE students
-            //                 (
-            //                     sid INT PRIMARY KEY IDENTITY(1,1),
-            //                     name varchar(50) NOT NULL,
-            //                     age INT CHECK(age>=18) NOT NULL
-            //                 )";
-            // cmd.ExecuteNonQuery();
+            cmd.CommandText = @"CREATE TABLE students
+                            (
+                                sid INT PRIMARY KEY IDENTITY(1,1),
+                                name varchar(50) NOT NULL,
+                                age INT CHECK(age>=18) NOT NULL
+                            )";
+            cmd.ExecuteNonQuery();
 
-            // cmd.CommandText = @"INSERT INTO students(name, age)
-            //                  VALUES ('aniket', 21),
-            //                         ('kumar', 22),
-            //                         ('soni', 23),
-            //                         ('anup', 24),
-            //                         ('anamika', 25)
-            //                         ";
-            // cmd.ExecuteNonQuery();
+            cmd.CommandText = @"INSERT INTO students(name, age)
+                             VALUES ('aniket', 21),
+                                    ('kumar', 22),
+                                    ('soni', 23),
+                                    ('anup', 24),
+                                    ('anamika', 25)
+                                    ";
+            cmd.ExecuteNonQuery();
 
             //read
             // cmd.CommandText = readquerry;
