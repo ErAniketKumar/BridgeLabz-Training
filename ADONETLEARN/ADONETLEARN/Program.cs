@@ -1,5 +1,9 @@
 using ADONETLEARN.ADONETLEARN.ADONET;
 
-DataBaseCrud dataBaseCrud = new DataBaseCrud();
+// DataBaseCrud dataBaseCrud = new DataBaseCrud();
 
-dataBaseCrud.DBOpr();
+// dataBaseCrud.DBOpr();
+CRUDOperation crudOper = new CRUDOperation();
+
+crudOper.ConnectionHandler();
+
