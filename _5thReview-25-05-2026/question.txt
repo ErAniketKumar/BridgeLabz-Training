@@ -1,0 +1,354 @@
+Project : Global Pandemic Intelligence System
+Scenario
+A healthcare analytics company wants to build a pandemic monitoring system using worldwide disease data similar to COVID datasets.
+The system should track:
+
+
+Daily cases
+
+Deaths
+
+Vaccinations
+
+Population analysis
+
+Continent-level trends
+
+Vaccination effectiveness
+
+
+Database Tables
+Tables
+
+Countries
+
+Continents
+
+Pandemic_Cases
+
+Pandemic_Deaths
+
+Vaccinations
+
+Vaccine_Types
+
+Hospitals
+
+Government_Restrictions
+
+
+Requirements
+Part A — Database Design
+Perform:
+
+
+DDL creation of all tables
+
+Primary Keys
+
+Foreign Keys
+
+Unique Constraints
+
+Check Constraints
+
+Default Constraints
+
+Example:
+
+
+Cases cannot be negative
+
+Vaccination doses cannot exceed population
+
+Death count cannot exceed total cases
+
+
+Part B — Data Operations
+Write DML queries for:
+
+
+Bulk insert daily records
+
+Update corrected death data
+
+Delete duplicate vaccination records
+
+
+Part C — Advanced Analytical Queries
+Queries to Build
+1. Infection Rate Analysis
+Find:
+
+
+Top 10 countries with highest infection rate
+
+Infection percentage vs population
+
+
+2. Death Percentage
+Calculate:
+
+
+Local death %
+
+Global death %
+
+Continent-wise death %
+
+
+3. Vaccination Analytics
+Using JOINS between deaths and vaccination tables:
+Find:
+
+
+Percentage of population vaccinated
+
+Fully vaccinated population
+
+Booster dose percentage
+
+Daily vaccination growth
+
+
+4. CTE-Based Trend Analysis
+Using CTE:
+
+
+Find 7-day moving average of cases
+
+Find countries where infection continuously increased for 5 days
+
+
+5. Ranking Queries
+Using:
+
+
+ROW_NUMBER()
+
+RANK()
+
+DENSE_RANK()
+
+Find:
+
+
+Top infected countries per continent
+
+
+Part D — Stored Procedures
+Create procedures for:
+
+Procedure 1
+sp_GetCountryCovidSummary
+
+Input:
+
+
+Country Name
+
+Output:
+
+
+Total Cases
+
+Total Deaths
+
+Death %
+
+Vaccination %
+
+
+Procedure 2
+sp_InsertDailyCovidData
+
+Should:
+
+
+Validate data
+
+Prevent duplicate entries
+
+Log insert history
+
+
+Part E — Functions
+Scalar Function
+Return mortality rate of a country.
+
+Table-Valued Function
+Return top infected countries by continent.
+
+
+Part F — Triggers
+Trigger 1
+When death data is inserted:
+
+
+Automatically update mortality summary table.
+
+Trigger 2
+Prevent deletion of vaccination records older than 30 days.
+
+
+Part G — Views
+Create:
+
+
+Global_Summary_View
+
+Country_Wise_Vaccination_View
+
+Continent_Death_Stats_View
+
+
+Part H — Temp Tables
+Use temp tables for:
+
+
+Daily reporting snapshots
+
+Top infected countries caching
+
+
+Part I — Indexing
+Implement:
+
+
+Clustered Index on country/date
+
+Non-clustered Index on vaccination status
+
+Then compare:
+
+
+Query performance before vs after indexing
+
+
+Part J — SQL Locks
+Simulate:
+
+
+Dirty Read
+
+Non-repeatable Read
+
+Phantom Read
+
+Using:
+
+
+Two SQL sessions
+
+
+
+
+
+tables and columns
+
+
+Continents
+ContinentId
+ContinentName
+TotalPopulation
+CreatedAt
+Countries
+CountryId
+CountryName
+CountryCode
+ContinentId
+Population
+CapitalCity
+CurrencyName
+GDP
+HealthcareIndex
+CreatedAt
+Pandemic_Cases
+CaseId
+CountryId
+ReportDate
+NewCases
+TotalCases
+ActiveCases
+RecoveredCases
+CriticalCases
+TestsConducted
+InfectionRate
+CreatedAt
+Pandemic_Deaths
+DeathId
+CountryId
+ReportDate
+NewDeaths
+TotalDeaths
+DeathPercentage
+MaleDeaths
+FemaleDeaths
+ChildDeaths
+SeniorCitizenDeaths
+CreatedAt
+Vaccine_Types
+VaccineTypeId
+VaccineName
+Manufacturer
+CountryOfOrigin
+RequiredDoses
+EffectivenessRate
+StorageTemperature
+WHOApproved
+CreatedAt
+Vaccinations
+VaccinationId
+CountryId
+VaccineTypeId
+VaccinationDate
+FirstDoseCount
+SecondDoseCount
+BoosterDoseCount
+TotalVaccinated
+DailyVaccinations
+VaccinationPercentage
+CreatedAt
+Hospitals
+HospitalId
+HospitalName
+CountryId
+City
+TotalBeds
+ICUBeds
+VentilatorCount
+DoctorsCount
+NursesCount
+CovidDedicated
+ContactNumber
+CreatedAt
+Government_Restrictions
+RestrictionId
+CountryId
+RestrictionType
+StartDate
+EndDate
+RestrictionLevel
+SchoolsClosed
+AirportsClosed
+LockdownApplied
+PublicGatheringRestricted
+VaccinationMandatory
+Description
+CreatedAt
+Mortality_Summary
+SummaryId
+CountryId
+TotalCases
+TotalDeaths
+MortalityRate
+LastUpdated
+Audit_Log
+AuditId
+TableName
+OperationType
+RecordId
+OldValue
+NewValue
+ChangedBy
+ChangedAt
