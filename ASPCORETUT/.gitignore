@@ -1,4 +1,14 @@
-bin
-obj
-/bin
-/obj
+# Build folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+
+# Logs
+*.log

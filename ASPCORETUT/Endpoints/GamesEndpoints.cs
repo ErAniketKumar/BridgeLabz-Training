@@ -1,5 +1,6 @@
 namespace ASPCORETUT.Endpoints;
 
+using MiniValidation;
 using ASPCORETUT.Dtos;
 
 public static class GameEndpoints
@@ -49,11 +50,15 @@ public static class GameEndpoints
         group.MapPost("/", (CreateGameDto newGame) =>
         {
 
-            if (string.IsNullOrEmpty(newGame.Name))
-            {
-                return Results.BadRequest("Name is required!");
-            }
+            // if (string.IsNullOrEmpty(newGame.Name))
+            // {
+            //     return Results.BadRequest("Name is required!");
+            // }
 
+            if (!MiniValidator.TryValidate(newGame, out var errors))
+            {
+                return Results.ValidationProblem(errors);
+            }
             GameDto game = new(
                 games.Count + 1,
                 newGame.Name,
@@ -66,6 +71,7 @@ public static class GameEndpoints
 
             return Results.CreatedAtRoute(GetGameEndPointName, new { Id = game.Id }, game);
         });
+
 
 
         group.MapPut("/{id}", (int id, UpdateGameDto updateGame) =>
