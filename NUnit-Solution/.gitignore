@@ -1,0 +1,54 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.so
+*.dylib
+
+# Visual Studio cache/options
+.vs/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+
+# Build outputs
+publish/
+PublishProfiles/
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+
+# Local environment files
+.env
+.env.local
+
+# Generated files
+*.g.cs
+.editorconfig
+
+# Operating system
+Thumbs.db
+.DS_Store
