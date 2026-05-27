@@ -9,9 +9,9 @@ GET http://localhost:5182/games/3
 ###
 POST http://localhost:5182/games
 Content-Type:application/json
-
+ 
 {
-    "name":"7th one",
+    "name":"",
     "genre":"okoko",
     "price":10.99,
     "releaseDate":"2021-03-10"

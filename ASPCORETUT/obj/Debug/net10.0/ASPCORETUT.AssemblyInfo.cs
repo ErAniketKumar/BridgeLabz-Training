@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ASPCORETUT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c049dc8932b844ece5e948c6311f07fed2a0ca9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ASPCORETUT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ASPCORETUT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
