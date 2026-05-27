@@ -1,0 +1,32 @@
+GET http://localhost:5182
+
+###
+GET http://localhost:5182/games
+
+###
+GET http://localhost:5182/games/3
+
+###
+POST http://localhost:5182/games
+Content-Type:application/json
+
+{
+    "name":"7th one",
+    "genre":"okoko",
+    "price":10.99,
+    "releaseDate":"2021-03-10"
+}
+
+###
+PUT http://localhost:5182/games/3
+Content-Type: application/json
+
+{
+    "name":"3rh update now third",
+    "gere":"hello gen update",
+    "price":56.99,
+    "updateDate":"2025-10-19"
+}
+
+###
+DELETE http://localhost:5182/games/3
