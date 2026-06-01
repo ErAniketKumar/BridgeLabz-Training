@@ -11,9 +11,9 @@ POST http://localhost:5182/games
 Content-Type:application/json
  
 {
-    "name":"hello",
-    "genre":"okoko",
-    "price":20030.0,
+    "name":"new game for db",
+    "genreId":2,
+    "price":30.0,
     "releaseDate":"2021-03-10"
 }
 

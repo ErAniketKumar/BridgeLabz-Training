@@ -2,6 +2,8 @@ namespace ASPCORETUT.Endpoints;
 
 using MiniValidation;
 using ASPCORETUT.Dtos;
+using ASPCORETUT.Data;
+using ASPCORETUT.Entities;
 
 public static class GameEndpoints
 {
@@ -47,28 +49,35 @@ public static class GameEndpoints
         })
         .WithName(GetGameEndPointName);
 
-        group.MapPost("/", (CreateGameDto newGame) =>
+        group.MapPost("/", (CreateGameDto newGame, GameStoreContext dbContext) =>
         {
 
-            // if (string.IsNullOrEmpty(newGame.Name))
+            // if (!MiniValidator.TryValidate(newGame, out var errors))
             // {
-            //     return Results.BadRequest("Name is required!");
+            //     return Results.ValidationProblem(errors);
             // }
+            // GameDto game = new(
+            //     games.Count + 1,
+            //     newGame.Name,
+            //     newGame.Genre,
+            //     newGame.Price,
+            //     newGame.ReleaseDate
+            // );
 
-            if (!MiniValidator.TryValidate(newGame, out var errors))
+            Game game = new()
             {
-                return Results.ValidationProblem(errors);
-            }
-            GameDto game = new(
-                games.Count + 1,
-                newGame.Name,
-                newGame.Genre,
-                newGame.Price,
-                newGame.ReleaseDate
-            );
+                Name = newGame.Name,
+                Genre = dbContext.Genres.Find(newGame.GenreId),
+                GenreId = newGame.GenreId,
+                Price = newGame.Price,
+                ReleaseDate = newGame.ReleaseDate
+            };
 
-            games.Add(game);
+            dbContext.Games.Add(game);
 
+            dbContext.SaveChanges();
+
+            // games.Add(game);
             return Results.CreatedAtRoute(GetGameEndPointName, new { Id = game.Id }, game);
         });
 
