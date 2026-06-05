@@ -9,7 +9,7 @@ namespace MVC_CRUD_APP.Data
         {
             
         }
-
         public DbSet<User> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
