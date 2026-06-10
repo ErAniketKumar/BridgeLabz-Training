@@ -1,0 +1,34 @@
+## Added for N-Tier-Architecture-Crud
+# Ignore local development application settings (contains connection strings)
+appsettings.Development.json
+
+# Core build outputs
+bin/
+obj/
+
+# User-specific files and layouts
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache and settings
+.vs/
+/.vs/
+VisualStudioSyncSettings.json
+
+# Rider / IntelliJ IDE
+.idea/
+
+# Visual Studio Code settings
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
