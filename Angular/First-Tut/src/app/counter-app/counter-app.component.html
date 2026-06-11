@@ -1,0 +1,32 @@
+<p>counter-app works!</p>
+
+<div>Count: {{ count }}</div>
+<button (click)="HandleDecrement()">-ve</button>
+<button (click)="HandleIncrement()">+ve</button>
+
+<button (click)="HandleReset()">Reset</button>
+
+@if (isHide == 1) {
+  <div
+    style="
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      margin-top: 10px;
+    "
+  ></div>
+} @else {
+  <div style="margin-top: 100px"></div>
+}
+<button (click)="ShowHideHandler()">
+  {{ textTitle }}
+</button>
+
+<div>
+  @for (item of arr; track item; let index = $index) {
+    <div>
+      <span> {{ index }} {{ item }} </span>
+      <button (click)="HandleGetItem(index)">getitems</button>
+    </div>
+  }
+</div>
