@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { CounterAppComponent } from "./counter-app/counter-app.component";
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { HeaderComponentComponent } from "./header-component/header-component.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CounterAppComponent, TodoListComponent],
+  imports: [RouterOutlet, RouterLink, CounterAppComponent, TodoListComponent, HeaderComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

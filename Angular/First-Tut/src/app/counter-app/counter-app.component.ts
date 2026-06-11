@@ -35,5 +35,8 @@ HandleGetItem(index:number) {
   console.log(index);
 }
   name="";
+
+  bgColor="red"
+  fontSize = "30"
   
 }

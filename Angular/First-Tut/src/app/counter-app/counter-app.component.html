@@ -35,3 +35,10 @@
   <input [(ngModel)]="name" type="text" placeholder="enter name" />
   <h1>{{ name }}</h1>
 </div>
+
+<div>
+  <h1 
+  [style.backgroundColor] = "bgColor"
+  [style.fontSize.px] = "fontSize"
+  >Hello dynamic style changed!</h1>
+</div>
