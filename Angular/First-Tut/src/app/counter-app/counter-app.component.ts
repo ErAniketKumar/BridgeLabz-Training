@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-counter-app',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './counter-app.component.html',
   styleUrl: './counter-app.component.css'
 })
@@ -33,4 +34,6 @@ arr: string[] = ["hello", "Aniket", "Kumar"];
 HandleGetItem(index:number) {
   console.log(index);
 }
+  name="";
+  
 }

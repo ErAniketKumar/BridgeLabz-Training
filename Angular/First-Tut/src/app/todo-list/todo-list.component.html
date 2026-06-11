@@ -1,0 +1,14 @@
+<h1>Todo List App</h1>
+
+<input [(ngModel)]="task" type="text" placeholder="enter task" />
+
+<button (click)="HandleAddTask(task)">Add Task</button>
+
+<div>
+  @for (task of taskList; track task) {
+    <p>
+      {{ task.task }} {{ task.id }}
+      <button (click)="HandleDeleteTask(task.id)">del</button>
+    </p>
+  }
+</div>
