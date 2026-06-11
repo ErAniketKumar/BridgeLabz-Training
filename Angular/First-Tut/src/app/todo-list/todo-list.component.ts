@@ -11,15 +11,21 @@ import { FormsModule } from '@angular/forms';
 export class TodoListComponent {
   task="";
   taskList:{id: number, task: string}[]=[];
-  
   id = 0;
   HandleAddTask(task:string) {
-    this.id = this.id+1;
-    let taskToBeAdd: {id: number, task:string}= {
+    if (!task.trim()) return;
+    this.id++;
+    // let taskToBeAdd: {id: number, task:string}= {
+    //   id:this.id,
+    //   task:task
+    // };
+    // this.taskList.push(taskToBeAdd);
+
+    this.taskList.push({
       id:this.id,
-      task:task
-    };
-    this.taskList.push(taskToBeAdd);
+      task
+    });
+    
     this.task = "";
   }
 
