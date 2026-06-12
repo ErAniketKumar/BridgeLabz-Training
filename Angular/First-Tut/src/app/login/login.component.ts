@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-login',
@@ -9,18 +9,28 @@ import { FormControl, FormsModule, ReactiveFormsModule } from "@angular/forms";
 })
 export class LoginComponent {
 
-  username = new FormControl();
-  password = new FormControl();
+  // username = new FormControl();
+  // password = new FormControl();
 
 
-  HandleLoginForm() {
-    console.log(this.username.value, this.password.value);
-  }
+  // HandleLoginForm() {
+  //   console.log(this.username.value, this.password.value);
+  // }
 
 
-  HandleSetDefaultValue() {
-    this.username.setValue("Aniket");
-    this.password.setValue("password123");
-  }
+  // HandleSetDefaultValue() {
+  //   this.username.setValue("Aniket");
+  //   this.password.setValue("password123");
+  // }
 
+    loginForm = new FormGroup({
+      username: new FormControl(),
+      email: new FormControl(),
+      password: new FormControl()
+    })
+
+    HandleFormSubmit() {
+      console.log(this.loginForm.value);
+      console.log(this.loginForm.value.username);
+    }
 }

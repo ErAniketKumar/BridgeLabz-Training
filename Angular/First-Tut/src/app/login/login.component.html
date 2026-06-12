@@ -1,6 +1,6 @@
 <h1>Login Form</h1>
 
-<form action="" method="post">
+<!-- <form action="" method="post">
   <label for="username">Username</label>
   <input type="text" name="username" id="username" [formControl]="username" />
   <br />
@@ -12,6 +12,25 @@
   <button type="button" (click)="HandleLoginForm()">Login</button>
 
   <button type="button"  (click)="HandleSetDefaultValue()" >Set Default Value</button>
-</form>
+</form> -->
 
 <!-- <h1>{{ username.value }} {{ password.value }}</h1> -->
+
+<form action="" [formGroup]="loginForm" (ngSubmit)="HandleFormSubmit()">
+  <label for="username">Username</label>
+  <input type="text" name="username" id="username" formControlName="username" />
+  <br />
+  <br />
+  <label for="email">Email</label>
+  <input type="text" name="email" id="email" formControlName="email" />
+  <br />
+  <br />
+  <label for="password">Password</label>
+  <input type="text" name="password" id="password" formControlName="password" />
+  <br />
+  <br />
+
+  <button type="submit">Submit</button>
+</form>
+
+<h1>{{ this.loginForm.value.email }}</h1>
