@@ -1,0 +1,18 @@
+<h1>Register form</h1>
+<form #userForm="ngForm" (ngSubmit)="addDetails(userForm)">
+  <input type="text" name="username" placeholder="username" ngModel />
+  <br />
+  <input type="text" name="email" placeholder="email" ngModel />
+  <br />
+  <input type="text" name="password" placeholder="*****" ngModel />
+  <br />
+  <select name="gender" id="gender" ngModel>
+    <option value="notselected">Not select</option>
+    <option value="male">male</option>
+    <option value="female">female</option>
+  </select>
+  <br />
+  <input type="range" min="0" max="500" name="range" ngModel /> <br />
+
+  <button type="submit">Submit</button>
+</form>
