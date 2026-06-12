@@ -10,7 +10,15 @@ import { RouterLink } from "@angular/router";
 })
 export class HomeComponent {
 
-  studentData = [
+  // studentData = [
+  //   {id: 1,name:"Aniket", age:20},
+  //   {id:2,name:"Kumar", age:21},
+  //   {id:3,name:"sonu", age:22},
+  //   {id:4,name:"soni", age:23},
+  // ]
+
+
+  users = [
     {id: 1,name:"Aniket", age:20},
     {id:2,name:"Kumar", age:21},
     {id:3,name:"sonu", age:22},
