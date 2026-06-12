@@ -6,7 +6,7 @@ import { HeaderComponentComponent } from "./header-component/header-component.co
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, CounterAppComponent, TodoListComponent, HeaderComponentComponent],
+  imports: [RouterOutlet, HeaderComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

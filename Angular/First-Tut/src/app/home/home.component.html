@@ -1,5 +1,11 @@
 <p>home works!</p>
 
-<div>
+<!-- <div>
   <li *ngFor="let data of studentData">{{ data.name }}, {{ data.age }}</li>
+</div> -->
+
+<div>
+  <a [routerLink]="['profile', { name: 'Aniket kumar', age: 20 }]"
+    >Go to Profile</a
+  >
 </div>
