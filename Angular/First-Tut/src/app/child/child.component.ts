@@ -27,7 +27,12 @@ export class ChildComponent {
 
   @Output() hadleChildFun = new EventEmitter();
 
-  ngOnInit() {
+  // pass data through onInit
+  // ngOnInit() {
+  //   this.hadleChildFun.emit(this.blogs);
+  // }
+
+  passDataHandler() {
     this.hadleChildFun.emit(this.blogs);
   }
 }
