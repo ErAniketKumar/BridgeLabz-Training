@@ -4,11 +4,17 @@ import { CounterAppComponent } from './counter-app/counter-app.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { UserComponent } from './user/user.component';
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponentComponent, UserComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponentComponent,
+    UserComponent,
+    ChildComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -48,4 +54,13 @@ export class AppComponent {
       course: 'B.Sc',
     },
   ];
+
+  blogs: any = [];
+
+  handleChild(blogs: any[]) {
+    this.blogs = blogs;
+    console.log(blogs);
+  }
+
+  
 }
