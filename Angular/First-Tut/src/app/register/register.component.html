@@ -1,6 +1,16 @@
 <h1>Register form</h1>
 <form #userForm="ngForm" (ngSubmit)="addDetails(userForm)">
-  <input type="text" name="username" placeholder="username" ngModel />
+  <input
+    #username="ngModel"
+    required
+    type="text"
+    name="username"
+    placeholder="username"
+    ngModel
+  />
+  <span class="error" *ngIf="username.invalid && username.touched"
+    >Name is Required</span
+  >
   <br />
   <input type="text" name="email" placeholder="email" ngModel />
   <br />
@@ -14,5 +24,10 @@
   <br />
   <input type="range" min="0" max="500" name="range" ngModel /> <br />
 
-  <button type="submit">Submit</button>
+  <button [disabled]="userForm.invalid" type="submit">Submit</button>
 </form>
+
+<h3>{{ userDetails.username }}</h3>
+<h3>{{ userDetails.gender }}</h3>
+<h3>{{ userDetails.email }}</h3>
+<h3>{{ userDetails.range }}</h3>
