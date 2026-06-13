@@ -1,7 +1,41 @@
 <h1>User Page</h1>
 
-<div>
+<!-- <div>
   <p>Id: {{ id }}</p>
   <p>name: {{ name }}</p>
   <p>Age: {{ age }}</p>
+</div> -->
+
+<!-- <div>
+  <h2>{{ user }}</h2>
+</div> -->
+
+<div>
+  <!-- <ul *ngFor="let u of user">
+    <li>{{ u.length }}</li>
+  </ul> -->
+
+  <!-- <div>{{ users.name }} , {{ users.age }}</div> -->
+</div>
+
+<!-- <div>
+  <p>{{ name }}</p>
+  <p>{{ city }}</p>
+</div> -->
+
+<div>
+  @for (student of students; track student.id) {
+    <table border="1">
+      <tr>
+        <th>Student ID</th>
+        <th>View Details</th>
+      </tr>
+      <tr>
+        <td>{{ student.id }}</td>
+        <td>
+          <app-student-details [student]="student"></app-student-details>
+        </td>
+      </tr>
+    </table>
+  }
 </div>

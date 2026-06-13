@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProfileComponent } from './profile/profile.component';
 import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './register/register.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'user/:id/:name/:age', component: UserComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'student-details', component: StudentDetailsComponent },
 
   { path: '**', component: PageNotFoundComponent },
 ];
