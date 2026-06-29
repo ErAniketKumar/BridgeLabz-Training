@@ -96,21 +96,42 @@
 //t2.Join();
 
 
+//using Learn_Multithreading.M1;
+
+//Example1 ex1 = new Example1();
+
+//Thread t1 = new Thread(ex1.Increment);
+
+//Thread t2 = new Thread(ex1.Increment);
+
+//t1.Name = "thread 1";
+//t2.Name = "thread 2";
+
+//t1.Start();
+//t2.Start();
+
+//t1.Join();
+//t2.Join();
+
+
+
+
 using Learn_Multithreading.M1;
 
-Example1 ex1 = new Example1();
+//DeadlockExample deadlock = new DeadlockExample();
 
-Thread t1 = new Thread(ex1.Increment);
+//Thread t1 = new Thread(deadlock.M1);
 
-Thread t2 = new Thread(ex1.Increment);
+//Thread t2 = new Thread(deadlock.M2);
 
-t1.Name = "thread 1";
-t2.Name = "thread 2";
+//t1.Start();
+//t2.Start();
+
+DeadLockSolution deadLockSolution = new DeadLockSolution();
+Thread t1 = new Thread(deadLockSolution.M1);
+
+Thread t2 = new Thread(deadLockSolution.M2);
 
 t1.Start();
 t2.Start();
-
-t1.Join();
-t2.Join();
-
 
