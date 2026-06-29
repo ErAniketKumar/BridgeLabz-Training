@@ -30,7 +30,7 @@ namespace Design_Pattern_IMP.Creational
             }   
         }
 
-        public static void Log(string msg)
+        public void Log(string msg)
         {
             Console.WriteLine(msg);
         }
