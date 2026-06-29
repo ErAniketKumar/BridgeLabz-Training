@@ -10,15 +10,15 @@ namespace Learn_Multithreading.M1
         static int count=0;
         public void Increment()
         {
-            //lock(this)
-            //{
+            lock (this)
+            {
 
-            for(int i=0;i<10000;i++)
+                for (int i=0;i<10000;i++)
             {
                 count++;
             }
             Console.WriteLine(count + " thread name "+Thread.CurrentThread.Name);
             }
-        //}
     }
+}
 }
