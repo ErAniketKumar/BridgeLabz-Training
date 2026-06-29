@@ -1,5 +1,6 @@
 ﻿
 using Design_Pattern_IMP.Creational;
+using Design_Pattern_IMP.Creational.Adopter;
 using Design_Pattern_IMP.Creational.Factory;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,9 +17,19 @@ using System.ComponentModel.DataAnnotations;
 //    lg1.Log("hello message");
 //}
 
-Ivehicle c1 =  VehicleFactory.Create("BMW");
+// factory like create object one places
+//if(true)
+//{
+//    Ivehicle c1 = VehicleFactory.Create("BMW");
 
-Ivehicle c2 = VehicleFactory.Create("Tesla");
+//    Ivehicle c2 = VehicleFactory.Create("Tesla");
 
-c1.Drive();
-c2.Drive();
+//    c1.Drive();
+//    c2.Drive();
+//}
+
+{
+    IPrinter printer = new Printer();
+    printer.Print();
+}
+
