@@ -1,6 +1,7 @@
 ﻿
 using Design_Pattern_IMP.Creational;
 using Design_Pattern_IMP.Creational.Adopter;
+using Design_Pattern_IMP.Creational.Facade;
 using Design_Pattern_IMP.Creational.Factory;
 using System.ComponentModel.DataAnnotations;
 
@@ -28,8 +29,15 @@ using System.ComponentModel.DataAnnotations;
 //    c2.Drive();
 //}
 
+//{
+//    IPrinter printer = new Printer();
+//    printer.Print();
+//}
+
+//faced i.e resturent customer dont know payment saved, validate and so,
+// similary user dont call manually while turn on laptop like bios start, cpu run, battery check, they press on directly
 {
-    IPrinter printer = new Printer();
-    printer.Print();
+    PaymentFacade faced = new PaymentFacade();
+    faced.CompletePayment();
 }
 
