@@ -127,11 +127,35 @@ using Learn_Multithreading.M1;
 //t1.Start();
 //t2.Start();
 
-DeadLockSolution deadLockSolution = new DeadLockSolution();
-Thread t1 = new Thread(deadLockSolution.M1);
+//DeadLockSolution deadLockSolution = new DeadLockSolution();
+//Thread t1 = new Thread(deadLockSolution.M1);
 
-Thread t2 = new Thread(deadLockSolution.M2);
+//Thread t2 = new Thread(deadLockSolution.M2);
 
-t1.Start();
-t2.Start();
+//t1.Start();
+//t2.Start();
+
+
+ThreadPull_Task tp = new ThreadPull_Task();
+
+
+//Task<int> t1 = tp.task;
+//int result = t1.Result;
+//Console.WriteLine(result);
+
+Task t1 = Task.Run(tp.Work1);
+
+Task t2 = Task.Run(tp.Work2);
+Task t3 = Task.Run(tp.Work3);
+
+//t1.Wait();
+//t2.Wait();
+//t3.Wait();
+
+Task.WaitAll(t1, t2, t3);
+
+
+
+
+
 
