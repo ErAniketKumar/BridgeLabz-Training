@@ -29,5 +29,10 @@ namespace Design_Pattern_IMP.Creational
                 return instance;
             }   
         }
+
+        public static void Log(string msg)
+        {
+            Console.WriteLine(msg);
+        }
     }
 }
