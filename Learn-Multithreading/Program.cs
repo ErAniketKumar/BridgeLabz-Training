@@ -140,8 +140,8 @@
 ThreadPull_Task tp = new ThreadPull_Task();
 
 
-Task<int> t1 = tp.task;
-int result = t1.Result;
+Task<int> t11 = tp.task;
+int result = t11.Result;
 Console.WriteLine(result);
 
 Task t1 = Task.Run(tp.Work1);
