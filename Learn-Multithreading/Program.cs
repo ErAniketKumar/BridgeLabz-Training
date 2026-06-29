@@ -1,11 +1,12 @@
-﻿//void MultithreadingMethod1()
+﻿using Learn_Multithreading.M1;
+
+//void MultithreadingMethod1()
 //{
 //    for(int i =1;i<=100;i++)
 //    {
 //       Console.WriteLine("method 1st, id: "+ Thread.CurrentThread.ManagedThreadId);
 //    }
 //}
-
 
 //void MultithreadingMethod2()
 //{
@@ -116,7 +117,7 @@
 
 
 
-using Learn_Multithreading.M1;
+
 
 //DeadlockExample deadlock = new DeadlockExample();
 
@@ -139,12 +140,11 @@ using Learn_Multithreading.M1;
 ThreadPull_Task tp = new ThreadPull_Task();
 
 
-//Task<int> t1 = tp.task;
-//int result = t1.Result;
-//Console.WriteLine(result);
+Task<int> t1 = tp.task;
+int result = t1.Result;
+Console.WriteLine(result);
 
 Task t1 = Task.Run(tp.Work1);
-
 Task t2 = Task.Run(tp.Work2);
 Task t3 = Task.Run(tp.Work3);
 
