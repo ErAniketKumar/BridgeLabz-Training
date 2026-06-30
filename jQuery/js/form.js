@@ -28,6 +28,13 @@ jQuery(document).ready(($) => {
       console.log(element.value);
     });
 
-    
+    // store in object
+    obj = {};
+
+    data.forEach((ele) => {
+      obj[ele.name] = ele.value;
+    });
+
+    console.log(obj);
   });
 });
