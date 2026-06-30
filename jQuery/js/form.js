@@ -36,5 +36,15 @@ jQuery(document).ready(($) => {
     });
 
     console.log(obj);
+
+    let html = "";
+
+    for (key in obj) {
+      html += `
+        <p> ${key} ${obj[key]} </p>
+        `;
+    }
+
+    $("#diaplay-value").html(html);
   });
 });
