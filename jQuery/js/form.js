@@ -24,9 +24,9 @@ jQuery(document).ready(($) => {
 
     data = $(this).serializeArray();
 
-    data.forEach((element) => {
-      console.log(element.value);
-    });
+    // data.forEach((element) => {
+    //   console.log(element.value);
+    // });
 
     // store in object
     obj = {};
