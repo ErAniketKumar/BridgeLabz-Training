@@ -1,0 +1,14 @@
+services:
+  auth-service:
+    image: eraniket/auth-service-dotnet:latest
+
+    container_name: auth-service
+
+    ports:
+      - "5001:8080"
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Server=tcp:kalawatiputra-server.database.windows.net,1433;Initial Catalog=kalawatiputra-db;Persist Security Info=False;User ID=aniadmin;Password=AniketAz@95;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+    restart: unless-stopped
