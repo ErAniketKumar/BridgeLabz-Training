@@ -17,3 +17,8 @@
 <h2>Fist Name: {{ fname() }}</h2>
 <h2>Last Name: {{ lname() }}</h2>
 <h2>FullName: {{ fullName() }}</h2>
+
+<h1>Effect in signal</h1>
+<h2 [style.color]="color">{{ speed() }}</h2>
+<button (click)="IncreaseSpeed()">Speed++</button>
+<button (click)="DecreaseSpeed()">Speed--</button>

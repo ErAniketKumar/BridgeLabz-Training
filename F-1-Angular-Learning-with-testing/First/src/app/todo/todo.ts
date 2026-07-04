@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-todo',
@@ -32,5 +32,26 @@ export class Todo {
   fullName = computed(() => {
     return this.fname() + this.lname();
   });
-  
+
+  speed = signal(0);
+
+  color = 'black';
+  IncreaseSpeed() {
+    this.speed.update((prev) => prev + 20);
+  }
+
+  DecreaseSpeed() {
+    this.speed() > 0 && this.speed.update((prev) => prev - 20);
+  }
+
+  constructor() {
+    effect(() => {
+      this.color = 'green';
+      if (this.speed() >= 80 && this.speed() <= 120) {
+        this.color = 'orange';
+      } else if (this.speed() > 120) {
+        this.color = 'red';
+      }
+    });
+  }
 }
