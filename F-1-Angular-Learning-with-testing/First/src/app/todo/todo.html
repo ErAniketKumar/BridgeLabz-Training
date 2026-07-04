@@ -9,6 +9,11 @@
 
 <h2>Counter app using signal</h2>
 
-<h3>Current Count {{value()}}</h3>
-<button (click)="counterFun('Inc')" >+</button>
-<button (click)="counterFun('Dec')" >-</button>
+<h3>Current Count {{ value() }}</h3>
+<button (click)="counterFun('Inc')">+</button>
+<button (click)="counterFun('Dec')">-</button>
+
+<h1>Computed signal</h1>
+<h2>Fist Name: {{ fname() }}</h2>
+<h2>Last Name: {{ lname() }}</h2>
+<h2>FullName: {{ fullName() }}</h2>

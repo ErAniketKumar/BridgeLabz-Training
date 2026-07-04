@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-todo',
@@ -25,4 +25,12 @@ export class Todo {
       this.value() > 0 && this.value.update((prev) => prev - 1);
     }
   }
+
+  fname = signal('Aniket');
+  lname = signal('Kumar');
+
+  fullName = computed(() => {
+    return this.fname() + this.lname();
+  });
+  
 }
