@@ -67,3 +67,8 @@
 <h1>Two ways data binding</h1>
 <input type="text" [value]="name()" (input)="name.set($event.target.value)" />
 <h2>displayed {{ name() }}</h2>
+
+<h1>two way binding without signal</h1>
+
+<input type="text" [value]="age" [(ngModel)]="age" />
+<h2>{{ age }}</h2>

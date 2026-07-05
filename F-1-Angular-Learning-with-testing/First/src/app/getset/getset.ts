@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-getset',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './getset.html',
   styleUrl: './getset.css',
 })
@@ -42,4 +43,5 @@ export class Getset {
   }
 
   name = signal('');
+  age = 10;
 }
