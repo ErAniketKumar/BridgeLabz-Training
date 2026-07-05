@@ -18,7 +18,7 @@
 
 <h3>USD: {{ rupees | currency }}</h3>
 <h3>INR: {{ rupees | currency: 'INT' }}</h3>
-
+<!-- 
 <h3>EURO: {{ rupees | currency: 'EUR' }}</h3>
 
 <h3>Japanese: {{ rupees | currency: 'JPY' }}</h3>
@@ -31,4 +31,7 @@
 
 <h3>date full: {{ date | date: 'full' }}</h3>
 
-<h3>date only dd: {{ date | date: 'dd' }}</h3>
+<h3>date only dd: {{ date | date: 'dd' }}</h3> -->
+
+<h2>Custome pipe</h2>
+<h3>{{ heading() | trimText }}</h3>
