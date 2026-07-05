@@ -1,0 +1,14 @@
+<h1>Todo List Application</h1>
+
+<input type="text" [value]="task()" (input)="task.set($event.target.value)" />
+<button (click)="addTaskBtn()">Add</button>
+
+<div>
+  @for (item of tasks(); track item.id) {
+    <div>
+      <span>{{ item.title }} </span>
+      <span (click)="editHandler(item.id)">Edit</span>
+      <span (click)="deleteHandler(item.id)">Del</span>
+    </div>
+  }
+</div>
