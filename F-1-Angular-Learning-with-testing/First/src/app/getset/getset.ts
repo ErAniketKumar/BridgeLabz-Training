@@ -40,4 +40,6 @@ export class Getset {
   showDay(day: string) {
     this.day.set(Number(day));
   }
+
+  name = signal('');
 }
