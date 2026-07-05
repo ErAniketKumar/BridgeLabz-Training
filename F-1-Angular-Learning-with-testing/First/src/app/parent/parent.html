@@ -1,3 +1,9 @@
 <p>parent works!</p>
 
-<app-child [flower]="flower()" [users]="users()"></app-child>
+<app-child
+  [flower]="flower()"
+  [users]="users()"
+  (messageEvent)="receiveMessage($event)"
+></app-child>
+
+<h2>{{ message }}</h2>

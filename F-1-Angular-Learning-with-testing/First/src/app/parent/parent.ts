@@ -15,5 +15,10 @@ export class Parent {
     { id: 2, name: 'Kumar', age: 22 },
     { id: 3, name: 'Abhishek', age: 19 },
   ]);
+
+  message = '';
+  receiveMessage(message: string) {
+    this.message = message;
+  }
   
 }
