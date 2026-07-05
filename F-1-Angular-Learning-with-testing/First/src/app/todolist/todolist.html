@@ -7,8 +7,8 @@
   @for (item of tasks(); track item.id) {
     <div>
       <span>{{ item.title }} </span>
-      <span (click)="editHandler(item.id)">Edit</span>
-      <span (click)="deleteHandler(item.id)">Del</span>
+      <button (click)="editHandler(item.id)">Edit</button>
+      <button (click)="deleteHandler(item.id)">Del</button>
     </div>
   }
 </div>
