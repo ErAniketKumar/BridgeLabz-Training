@@ -4,4 +4,29 @@
 <!-- <app-getset></app-getset> -->
 
 <!-- <app-todolist></app-todolist> -->
-<app-parent> </app-parent>
+<!-- <app-parent> </app-parent> -->
+
+<!-- <app-display-count></app-display-count>
+<app-control-count></app-control-count> -->
+
+<h1>Pipe in Angular</h1>
+<p>{{ title | uppercase }}</p>
+
+<p>{{ title | lowercase }}</p>
+
+<p>{{ title | titlecase }}</p>
+
+<h3>USD: {{ rupees | currency }}</h3>
+<h3>INR: {{ rupees | currency: 'INT' }}</h3>
+
+<h3>EURO: {{ rupees | currency: 'EUR' }}</h3>
+
+<h3>Japanese: {{ rupees | currency: 'JPY' }}</h3>
+
+<h3>CHINA: {{ rupees | currency: 'CNY' }}</h3>
+
+<h3>date: {{ date | date }}</h3>
+
+<h3>date short: {{ date | date: 'short' }}</h3>
+
+<h3>date full: {{ date | date: 'full' }}</h3>
