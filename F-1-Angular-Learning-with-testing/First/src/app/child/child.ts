@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, output, Output, Signal, signal } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -17,5 +17,15 @@ export class Child {
     this.messageEvent.emit('hello parent this is emited from child!');
   }
 
+  dataEvent = output<any[]>();
   
+  nusers = signal([
+    { id: 1, name: 'Sonu' },
+    { id: 2, name: 'Modi' },
+    { id: 3, name: 'kapooer' },
+  ]);
+
+  sendToParent() {
+    this.dataEvent.emit(this.nusers());
+  }
 }

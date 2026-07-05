@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, Signal, signal, WritableSignal } from '@angular/core';
 import { Child } from '../child/child';
 
 @Component({
@@ -20,5 +20,10 @@ export class Parent {
   receiveMessage(message: string) {
     this.message = message;
   }
-  
+
+  dataFromChild = signal<any>([]);
+
+  received(data: any[]) {
+    this.dataFromChild.set(data);
+  }
 }

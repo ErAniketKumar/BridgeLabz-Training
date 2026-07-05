@@ -4,6 +4,11 @@
   [flower]="flower()"
   [users]="users()"
   (messageEvent)="receiveMessage($event)"
+  (dataEvent)="received($event)"
 ></app-child>
 
 <h2>{{ message }}</h2>
+
+@for (d of dataFromChild(); track $index) {
+  <span>{{ d.name }}</span>
+}
