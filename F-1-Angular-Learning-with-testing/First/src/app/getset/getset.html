@@ -1,5 +1,65 @@
 <p>getset works!</p>
 
-<p>entered value is: {{value()}}</p>
-<input type="text" [value] = "value()" (input)="setValue($event.target.value)" placeholder="type anything">
-<button (click)="setValueFun()" >setValue</button>
+<p>entered value is: {{ value() }}</p>
+<input
+  type="text"
+  [value]="value()"
+  (input)="setValue($event.target.value)"
+  placeholder="type anything"
+/>
+<button (click)="setValueFun()">setValue</button>
+
+<h1>looping</h1>
+
+<div>
+  @for (user of data(); track user.id) {
+    @if (user.id != 2) {
+      <div>
+        <span>{{ user.id }}</span>
+        <span>{{ user.name }}</span>
+        <span>{{ user.age }}</span>
+      </div>
+    } @else {
+      <span>id: {{ user.id }} skipped!</span>
+    }
+  }
+</div>
+
+<h1>switching....</h1>
+
+<input
+  type="text"
+  placeholder="enter number for day.."
+  [value]="day()"
+  (input)="showDay($event.target.value)"
+/>
+
+<div>
+  @switch (day()) {
+    @case (1) {
+      <span>Sunday!</span>
+    }
+    @case (2) {
+      <span>Monday!</span>
+    }
+
+    @case (3) {
+      <span>Tuesday!</span>
+    }
+    @case (4) {
+      <span>Wednesday!</span>
+    }
+    @case (5) {
+      <span>Thursday!</span>
+    }
+    @case (6) {
+      <span>Friday!</span>
+    }
+    @case (7) {
+      <span>Saturday!</span>
+    }
+    @default {
+      <span>not valid day!</span>
+    }
+  }
+</div>
