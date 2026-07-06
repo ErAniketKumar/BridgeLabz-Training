@@ -7,10 +7,22 @@ import { DisplayCount } from './display-count/display-count';
 import { ControlCount } from './control-count/control-count';
 import { CommonModule } from '@angular/common';
 import { TrimTextPipe } from './custome-pipe/trim-text-pipe';
-
+import { Navbar } from './components/navbar/navbar';
+import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
-  imports: [Todo, Getset, Todolist, Parent, DisplayCount, ControlCount, CommonModule, TrimTextPipe],
+  imports: [
+    Todo,
+    Getset,
+    Todolist,
+    Parent,
+    DisplayCount,
+    ControlCount,
+    CommonModule,
+    TrimTextPipe,
+    Navbar,
+    RouterOutlet,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
