@@ -8,7 +8,12 @@ import { User } from './components/user/user';
 export const routes: Routes = [
   { path: '', component: Home },
   { path: 'about', component: About },
-  { path: 'contact', component: Contact },
+  // { path: 'contact', component: Contact },
+  //lazy loading
+  {
+    path: 'contact',
+    loadComponent: () => import('./components/contact/contact').then((c) => c.Contact),
+  },
   // { path: 'user/:id', component: User },
   { path: 'user', component: User },
   { path: '**', component: PageNotFound },
