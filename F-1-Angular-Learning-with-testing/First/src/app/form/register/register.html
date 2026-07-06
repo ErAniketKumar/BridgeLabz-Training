@@ -1,0 +1,20 @@
+<h2>Register Form Using Template Driven</h2>
+
+<form #registerForm="ngForm" action="" (ngSubmit)="regiterFormHandler(registerForm.value)">
+  <input type="text" name="name" placeholder="name.." ngModel />
+  <br />
+  <input type="email" name="email" placeholder="email.." ngModel />
+  <br />
+  <input type="password" name="password" placeholder="password..." ngModel />
+  <br />
+  <select name="gender" id="" ngModel>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+
+  <br />
+  <input type="range" name="age" ngModel />
+  <br />
+  <textarea name="userbio" id="" ngModel>userbio</textarea>
+  <button type="submit">Submit</button>
+</form>

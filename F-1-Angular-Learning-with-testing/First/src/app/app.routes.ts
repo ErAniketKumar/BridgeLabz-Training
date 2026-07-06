@@ -5,6 +5,7 @@ import { Contact } from './components/contact/contact';
 import { PageNotFound } from './components/page-not-found/page-not-found';
 import { User } from './components/user/user';
 import { authGuard } from './guards/auth-guard';
+import { Register } from './form/register/register';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   },
   // { path: 'user/:id', component: User },
   { path: 'user', component: User },
+  { path: 'register', component: Register },
   {
     path: 'dashboard',
     loadComponent: () => import('./components/dashboard/dashboard').then((c) => c.Dashboard),
