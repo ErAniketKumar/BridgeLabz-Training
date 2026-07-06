@@ -11,5 +11,5 @@ export const routes: Routes = [
   { path: 'contact', component: Contact },
   // { path: 'user/:id', component: User },
   { path: 'user', component: User },
-  { path: '*', component: PageNotFound },
+  { path: '**', component: PageNotFound },
 ];
