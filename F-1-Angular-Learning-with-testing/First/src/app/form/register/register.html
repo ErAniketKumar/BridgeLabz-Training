@@ -1,6 +1,6 @@
-<h2>Register Form Using Template Driven</h2>
+<!-- <h2>Register Form Using Template Driven</h2> -->
 
-<form #registerForm="ngForm" action="" (ngSubmit)="regiterFormHandler(registerForm.value)">
+<!-- <form #registerForm="ngForm" action="" (ngSubmit)="regiterFormHandler(registerForm.value)">
   <input type="text" name="name" placeholder="name.." ngModel />
   <br />
   <input type="email" name="email" placeholder="email.." ngModel />
@@ -17,4 +17,11 @@
   <br />
   <textarea name="userbio" id="" ngModel>userbio</textarea>
   <button type="submit">Submit</button>
-</form>
+</form> -->
+
+<h1>Signal form</h1>
+
+<input type="email"  placeholder="email.." [formField]="loginForm.email" /> <br />
+<input type="password"  placeholder="password.." [formField]="loginForm.password" />
+<br />
+<button (click)="submitHandler()">submit</button>
