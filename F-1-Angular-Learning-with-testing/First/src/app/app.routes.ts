@@ -4,6 +4,7 @@ import { About } from './components/about/about';
 import { Contact } from './components/contact/contact';
 import { PageNotFound } from './components/page-not-found/page-not-found';
 import { User } from './components/user/user';
+import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -16,5 +17,10 @@ export const routes: Routes = [
   },
   // { path: 'user/:id', component: User },
   { path: 'user', component: User },
+  {
+    path: 'dashboard',
+    loadComponent: () => import('./components/dashboard/dashboard').then((c) => c.Dashboard),
+    canActivate: [authGuard],
+  },
   { path: '**', component: PageNotFound },
 ];
