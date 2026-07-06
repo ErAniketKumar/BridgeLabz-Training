@@ -1,1 +1,27 @@
-<p>profile works!</p>
+<!-- <h1>Reactive form</h1>
+<input type="text" placeholder="email.." [formControl]="email" /> <br />
+<input type="text" placeholder="password.." [formControl]="password" /> <br />
+
+<select name="" id="" [formControl]="gender">
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+</select>
+
+<button type="submit" (click)="submitHandler()">Submit</button> -->
+
+<h1>Reactive form with form group</h1>
+
+<form action="" [formGroup]="form" (ngSubmit)="submitHandler()">
+  <input type="text" name="name" placeholder="name..." formControlName="name" /> <br />
+  <input type="email" name="email" placeholder="email..." formControlName="email" /> <br />
+  <input type="password" name="password" placeholder="password..." formControlName="password" />
+  <br />
+  <input type="range" formControlName="range" />
+  <select name="gender" id="" formControlName="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+  <br />
+  <input type="number" placeholder="Age" formControlName="age" /> <br />
+  <button type="submit">Submit</button>
+</form>
