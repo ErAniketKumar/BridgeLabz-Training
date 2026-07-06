@@ -20,17 +20,27 @@ export class Profile {
   //   console.log(this.gender.value);
   // }
 
+  name = '';
+  email = '';
+  password = '';
+  age = 0;
+
   form = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(5)]),
+
     email: new FormControl('', [Validators.required, Validators.email]),
+
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(4),
       Validators.maxLength(16),
     ]),
+
     range: new FormControl(''),
-    gender: new FormControl('male', [Validators.required, Validators.min(18), Validators.max(80)]),
-    age: new FormControl(''),
+
+    gender: new FormControl('male', [Validators.required]),
+
+    age: new FormControl('', [Validators.required, Validators.min(18), Validators.max(80)]),
   });
 
   submitHandler() {

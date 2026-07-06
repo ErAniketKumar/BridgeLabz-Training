@@ -14,6 +14,9 @@
 <form action="" [formGroup]="form" (ngSubmit)="submitHandler()">
   <input type="text" name="name" placeholder="name..." formControlName="name" /> <br />
   <input type="email" name="email" placeholder="email..." formControlName="email" /> <br />
+  @if (form.get('email')?.hasError('required') && form.get('email')?.touched) {
+    <span>Email is required</span>
+  }
   <input type="password" name="password" placeholder="password..." formControlName="password" />
   <br />
   <input type="range" formControlName="range" />
@@ -23,5 +26,8 @@
   </select>
   <br />
   <input type="number" placeholder="Age" formControlName="age" /> <br />
+  @if (form.get('age')?.hasError('max') && form.get('age')?.touched) {
+    <span>Maximum age is 80</span>
+  }
   <button type="submit">Submit</button>
 </form>
