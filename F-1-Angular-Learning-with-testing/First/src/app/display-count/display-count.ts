@@ -10,5 +10,4 @@ import { Counter } from '../service/counter';
 export class DisplayCount {
   constructor(public state: Counter) {}
   
-
 }
