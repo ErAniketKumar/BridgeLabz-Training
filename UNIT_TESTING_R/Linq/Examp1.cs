@@ -94,6 +94,38 @@ namespace UNIT_TESTING_R.Linq
             }
 
 
+            Stack<int> st = new Stack<int>();
+
+            foreach(var x in list)
+            {
+                st.Push(x);
+            }
+
+            while(st.Count>0)
+            {
+                Console.WriteLine(st.Peek());
+                st.Pop();
+            }
+
+            Console.WriteLine("queue");
+
+            Queue<int> qu = new Queue<int>();
+
+            foreach(var x in list)
+            {
+                qu.Enqueue(x);
+            }
+
+            foreach(var x in qu)
+            {
+                Console.WriteLine(x);
+            }
+
+            while(qu.Count>0)
+            {
+                Console.WriteLine(qu.Peek());
+                qu.Dequeue();
+            }
         }
 
 
