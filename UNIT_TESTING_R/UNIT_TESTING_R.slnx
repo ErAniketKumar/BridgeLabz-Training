@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Testing/Testing.csproj" />
+  <Project Path="UNIT_TESTING_R.csproj" />
+</Solution>
