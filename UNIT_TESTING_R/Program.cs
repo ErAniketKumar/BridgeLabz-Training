@@ -8,6 +8,10 @@
 
 using UNIT_TESTING_R.Linq;
 
-Examp1 examp1 = new Examp1();
+//Examp1 examp1 = new Examp1();
 
-examp1.TravercelCollection();
+//examp1.TravercelCollection();
+
+Examp2 examp2 = new Examp2();
+
+examp2.Linq1();
