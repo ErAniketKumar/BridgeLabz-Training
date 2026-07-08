@@ -8,7 +8,7 @@ namespace UNIT_TESTING_R.Linq
     {
        public void TravercelCollection()
         {
-            List<int> list = new List<int>() { 1, 3, 4, 5, 9, 0, 2 };
+            List<int> list = new List<int>() { 1, 3, 4, 5, 9, 0, 2,1,2,0,9,5 };
 
             for(int i =0;i<list.Count;i++)
             {
@@ -20,11 +20,80 @@ namespace UNIT_TESTING_R.Linq
             {
                 {1,0 },
                 {2,1},
-                {2,3 }
+                {4,3 }
             };
 
-            for(var key in dist) { 
+            foreach(var key in dist.Keys) {
+                Console.Write(dist[key]);
             }
+
+            Console.WriteLine();
+            Dictionary<int, int> freq = new Dictionary<int, int>();
+
+            foreach(var x in list)
+            {
+                if(freq.ContainsKey(x))
+                {
+                    freq[x]++;
+                } else
+                {
+                    freq[x] = 1;
+                }
+            }
+
+            foreach(var key in freq.Keys)
+            {
+                Console.WriteLine($"{key}-> {freq[key]}");
+            }
+
+            HashSet<int> set = new HashSet<int>();
+            for(int i=0;i<list.Count;i++)
+            {
+                set.Add(list[i]);
+            }
+
+            foreach (var x in set) {
+                Console.WriteLine(x+" ");
+            }
+
+            SortedSet<int> sset = new SortedSet<int>() { 1, 3, 232, 42, 1, 2, 121312, 312312, 31, 1, 2, 23, 23, 21, 0 };
+
+            foreach (var x in sset)
+            {
+                Console.WriteLine(x+" ");
+            }
+
+            sset.Clear();
+
+            for(int i=0;i<list.Count;i++)
+            {
+                sset.Add(list[i]);
+            }
+
+            foreach (var x in sset)
+            {
+                Console.WriteLine(x + " ");
+            }
+
+            SortedDictionary<int, int> sdict = new SortedDictionary<int, int>();
+
+            foreach(var x in list)
+            {
+                if(sdict.ContainsKey(x))
+                {
+                    sdict[x]++;
+                } else
+                {
+                    sdict[x] = 1;
+                }
+            }
+
+            foreach(var keypair in sdict)
+            {
+                Console.WriteLine(keypair.Key+"->"+ keypair.Value);
+            }
+
+
         }
 
 
